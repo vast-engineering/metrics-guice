@@ -4,7 +4,7 @@
 
     <groupId>com.palominolabs.metrics</groupId>
     <artifactId>metrics-guice</artifactId>
-    <version>3.1.2-SNAPSHOT</version>
+    <version>3.1.2-vast-0.1-SNAPSHOT</version>
     <name>Metrics Guice Support</name>
     <packaging>bundle</packaging>
 
@@ -58,7 +58,28 @@
         <slf4j.version>1.7.7</slf4j.version>
         <guice.version>3.0</guice.version>
         <jetty.version>9.1.4.v20140401</jetty.version>
+
+<!-- BEGIN VAST OVERRIDE -->
+      <!-- override these in your local settings.xml -->
+      <release.repo.id>UNDEFINED</release.repo.id>
+      <release.repo.url>UNDEFINED</release.repo.url>
+      <snapshot.repo.id>UNDEFINED</snapshot.repo.id>
+      <snapshot.repo.url>UNDEFINED</snapshot.repo.url>
+<!-- END VAST OVERRIDE -->
     </properties>
+
+<!-- BEGIN VAST OVERRIDE -->
+  <distributionManagement>
+      <repository>
+          <id>${release.repo.id}</id>
+          <url>${release.repo.url}</url>
+      </repository>
+      <snapshotRepository>
+          <id>${snapshot.repo.id}</id>
+          <url>${snapshot.repo.url}</url>
+      </snapshotRepository>
+  </distributionManagement>
+<!-- END VAST OVERRIDE -->
 
     <dependencies>
         <dependency>
